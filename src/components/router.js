@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // 1. 定义 (路由) 组件。
 // 可以从其他文件 import 进来
 import VacHome from "@/components/VacHome";
+import ArticleDetail from "@/components/ArticleDetail";
 const Foo = {template: '<div>foo</div>'}
 const Bar = {template: '<div>bar</div>'}
 
@@ -15,7 +16,8 @@ const routes = [
     {path: '/', component: VacHome},
     {path: '/home', component: VacHome},
     {path: '/foo', component: Foo},
-    {path: '/bar', component: Bar}
+    {path: '/bar', component: Bar},
+    {path: '/detail', component: ArticleDetail}
 ]
 
 const router = createRouter({
