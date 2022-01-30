@@ -5,7 +5,9 @@
         <div class="title">centos 安装 ghost 博客</div>
       </el-col>
       <el-col :span="24">
-        <author-item authorName="pengwei" authorTime="2222"></author-item>
+        <div class="detail-author">
+          <author-item authorName="pengwei" authorTime="2222"></author-item>
+        </div>
       </el-col>
       <el-col :span="24">
         <div class="article-cover">
@@ -13,11 +15,11 @@
         </div>
       </el-col>
       <el-col :span="24">
-        <v-md-preview :text="text"></v-md-preview>
+        <div class="detail-content">
+          <v-md-preview :text="text"></v-md-preview>
+        </div>
       </el-col>
     </el-row>
-
-
 
 
   </div>
@@ -27,6 +29,7 @@ import AuthorItem from "./AuthorItem";
 
 <script>
 import AuthorItem from "@/components/AuthorItem";
+
 export default {
   name: "ArticleDetail",
   components: {AuthorItem},
@@ -55,13 +58,24 @@ export default {
 
 <style scoped>
 
-.title{
+.title {
+  margin-top: 60px;
   font-weight: bold;
   font-size: 3rem;
 }
 
+.detail-author {
+  margin: 60px 0;
+}
+
 .article-cover img {
   width: 100%;
+}
+
+.detail-content {
+  margin-bottom: 100px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 </style>

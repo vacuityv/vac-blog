@@ -7,7 +7,7 @@ import 'element-plus/dist/index.css'
 import VMdPreview from '@kangc/v-md-editor/lib/preview';
 import '@kangc/v-md-editor/lib/style/preview.css';
 import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
-import '@kangc/v-md-editor/lib/theme/style/github.css';
+// import '@kangc/v-md-editor/lib/theme/style/github.css';
 import * as ElIconModules from '@element-plus/icons-vue'
 
 // highlightjs
