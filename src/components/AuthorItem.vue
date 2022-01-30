@@ -1,7 +1,7 @@
 <template>
   <el-row class="vac-article-author">
     <el-col :span="1">
-      <img src="../assets/logo.png">
+      <el-avatar :size="45" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
     </el-col>
     <el-col :span="18">
       <el-row>

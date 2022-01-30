@@ -9,6 +9,7 @@
         router="true"
         active-text-color="white"
     >
+
       <el-menu-item index="/" class="vac-header-menu-item">
         <div class="vac-header-menu">
           <img src="../assets/logo.png">
@@ -30,13 +31,30 @@ export default {
 </script>
 
 <style scoped>
+.vac-home-header {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6vw 3vw;
+  min-height: 200px;
+  max-height: 340px;
+  text-align: center;
+  margin-bottom: 50px;
+}
 
 .vac-header{
   z-index: 100;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .vac-header .el-menu {
   background-color: #4f72f3;
+  /*background-color: red;*/
+  height: var(--el-header-height);
 }
 
 .vac-header-right {

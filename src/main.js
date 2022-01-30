@@ -8,6 +8,7 @@ import VMdPreview from '@kangc/v-md-editor/lib/preview';
 import '@kangc/v-md-editor/lib/style/preview.css';
 import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
 import '@kangc/v-md-editor/lib/theme/style/github.css';
+import * as ElIconModules from '@element-plus/icons-vue'
 
 // highlightjs
 import hljs from 'highlight.js';
@@ -20,7 +21,18 @@ const app = createApp(App)
 app.use(router)
 app.use(ElementPlus)
 app.use(VMdPreview)
+
+// 统一注册el-icon图标
+for(let iconName in ElIconModules){
+    app.component(iconName,ElIconModules[iconName])
+}
+
 app.mount('#app')
+
+
+
+
+
 
 
 

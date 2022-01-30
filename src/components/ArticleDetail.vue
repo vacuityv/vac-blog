@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-content">
     <el-row>
       <el-col :span="24">
         <div class="title">centos 安装 ghost 博客</div>

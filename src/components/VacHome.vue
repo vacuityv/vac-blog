@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <div class="vac-home-article">
+    <div class="vac-home-article main-content">
       <el-row :gutter="40" class="vac-home-article-first">
         <el-col :span="16">
           <div class="grid-content bg-purple-dark">
@@ -31,7 +31,7 @@
             <el-row class="vac-article-author">
               <el-row>
                 <el-col :span="6">
-                  <img src="../assets/logo.png">
+                  <el-avatar :size="45" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
                 </el-col>
                 <el-col :span="18">
                   <el-row>
@@ -70,7 +70,7 @@
                   <el-row class="vac-article-author">
                     <el-row>
                       <el-col :span="6">
-                        <img src="../assets/logo.png">
+                        <el-avatar :size="45" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
                       </el-col>
                       <el-col :span="18">
                         <el-row>
@@ -110,7 +110,7 @@
                   <el-row class="vac-article-author">
                     <el-row>
                       <el-col :span="6">
-                        <img src="../assets/logo.png">
+                        <el-avatar :size="45" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
                       </el-col>
                       <el-col :span="18">
                         <el-row>
@@ -150,7 +150,7 @@
                   <el-row class="vac-article-author">
                     <el-row>
                       <el-col :span="6">
-                        <img src="../assets/logo.png">
+                        <el-avatar :size="45" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
                       </el-col>
                       <el-col :span="18">
                         <el-row>
@@ -190,7 +190,7 @@
                   <el-row class="vac-article-author">
                     <el-row>
                       <el-col :span="6">
-                        <img src="../assets/logo.png">
+                        <el-avatar :size="45" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
                       </el-col>
                       <el-col :span="18">
                         <el-row>
@@ -216,7 +216,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 
 .vac-home-header {
   position: relative;
@@ -229,6 +230,7 @@ export default {
   min-height: 200px;
   max-height: 340px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .vac-home-header .vac-home-cover {
@@ -255,10 +257,6 @@ export default {
 
 .vac-home-header > .el-menu--horizontal > .el-menu-item {
   display: none !important;
-}
-
-.vac-home-article {
-  margin-top: 50px;
 }
 
 .vac-home-article-first {
@@ -330,6 +328,7 @@ export default {
 
 .vac-home-article-item {
   height: 400px;
+  margin-top: 50px;
 }
 .vac-home-article-item-img{
   height: 200px;
