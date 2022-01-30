@@ -16,7 +16,7 @@
         </div>
       </el-menu-item>
       <el-menu-item index="/home">Home</el-menu-item>
-      <el-menu-item index="/bar">About</el-menu-item>
+      <el-menu-item index="/about">About</el-menu-item>
       <el-menu-item index="/detail">ArticleDetail</el-menu-item>
       <el-menu-item index="3" class="vac-header-right">Other</el-menu-item>
     </el-menu>
