@@ -7,12 +7,11 @@
       <el-main>
         <router-view></router-view>
       </el-main>
-<!--      <el-footer>Footer</el-footer>-->
+      <!--      <el-footer>Footer</el-footer>-->
     </el-container>
 
-    <div class="afb-right">
-      <el-icon :size="24" color="white" class="afb-right"><user/></el-icon>
-    </div>
+
+    <Login/>
 
   </div>
 </template>
@@ -20,18 +19,23 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import VacHeader from "@/components/VacHeader";
+import Login from "@/components/Login";
+
+
 
 export default {
   name: 'App',
-  components: {VacHeader},
-  // components: {
-  //   HelloWorld
-  // }
+  components: {
+    VacHeader,
+    Login
+  }
 }
+
+
 </script>
 
 <style>
-body{
+body {
   margin: 0;
 }
 
