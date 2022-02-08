@@ -11,15 +11,14 @@
     </el-container>
 
 
-    <Login/>
+<!--    <Login/>-->
 
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import VacHeader from "@/components/VacHeader";
-import Login from "@/components/Login";
+// import Login from "@/components/Login";
 
 
 
@@ -27,7 +26,7 @@ export default {
   name: 'App',
   components: {
     VacHeader,
-    Login
+    // Login
   }
 }
 
