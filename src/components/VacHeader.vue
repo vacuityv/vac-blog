@@ -4,13 +4,15 @@
     <el-menu
         :default-active="activeIndex"
         class="el-menu-demo"
+        :class="{'type-transparent': isHome}"
         mode="horizontal"
         @select="handleSelect"
         router="true"
         active-text-color="white"
+        
     >
 
-      <el-menu-item index="/" class="vac-header-menu-item" v-if="this.$route.path!='/' && this.$route.path!='/home'">
+      <el-menu-item index="/" class="vac-header-menu-item" v-if="!isHome">
         <div class="vac-header-menu">
           <img src="../assets/logo.png">
         </div>
@@ -25,8 +27,23 @@
 </template>
 
 <script>
+// let isFirst = true
+
 export default {
-  name: "VacHeader"
+  name: "VacHeader",
+  data() {
+    return {
+      isHome: ''
+    }
+  },
+  watch: {
+    $route: function(to) {
+      this.isHome = to.path === '/' || to.path === '/home'
+    }
+  },
+  mounted() {
+
+  },
 }
 </script>
 
@@ -57,6 +74,10 @@ export default {
   height: var(--el-header-height);
 }
 
+.vac-header .el-menu.type-transparent {
+  background: transparent;
+}
+
 .vac-header-right {
   float: right; /* 浮动在右边 */
 }
@@ -81,6 +102,7 @@ export default {
   color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
   font-size: 1rem;
+  transition: color var(--el-transition-duration)
 }
 
 .el-menu--horizontal > .el-menu-item:hover {
@@ -92,6 +114,9 @@ export default {
   color: white;
 }
 
+.el-menu--horizontal > .el-menu-item {
+  border-bottom: 0;
+}
 .el-menu--horizontal > .el-menu-item.is-active {
   border-bottom: 0px;
 }

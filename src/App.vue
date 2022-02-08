@@ -1,7 +1,7 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header>
+      <el-header class="com-header" :class="{'type-transparent': this.$route.path === '/' || this.$route.path === '/home'}">
         <vac-header></vac-header>
       </el-header>
       <el-main>
@@ -61,13 +61,23 @@ body {
   height: var(--el-header-height);
   background-color: #4f72f3;
 }
+.com-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 60;
+}
+.type-transparent {
+  background: transparent;
+}
 
 #app .el-main {
   --el-main-padding: 0px;
   display: block;
   flex: 1;
   flex-basis: auto;
-  overflow: auto;
+  overflow: visible;
   box-sizing: border-box;
   padding: var(--el-main-padding);
 }
