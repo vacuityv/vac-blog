@@ -10,7 +10,7 @@
         active-text-color="white"
     >
 
-      <el-menu-item index="/" class="vac-header-menu-item">
+      <el-menu-item index="/" class="vac-header-menu-item" v-if="this.$route.path!='/' && this.$route.path!='/home'">
         <div class="vac-header-menu">
           <img src="../assets/logo.png">
         </div>
@@ -45,7 +45,7 @@ export default {
   margin-bottom: 50px;
 }
 
-.vac-header{
+.vac-header {
   z-index: 100;
   max-width: 1200px;
   margin: auto;
@@ -65,29 +65,34 @@ export default {
   border-bottom: 0;
 }
 
-.vac-header-menu{
+.vac-header-menu {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   margin: 0;
 }
+
 .vac-header-menu img {
   height: 30px;
 }
-.el-menu--horizontal>.el-menu-item {
+
+.el-menu--horizontal > .el-menu-item {
   color: rgba(255, 255, 255, 0.7);
   font-weight: bold;
   font-size: 1rem;
 }
-.el-menu--horizontal>.el-menu-item:hover {
+
+.el-menu--horizontal > .el-menu-item:hover {
   background-color: inherit;
 }
+
 .vac-header-menu .el-menu .el-menu-item.is-active {
   border-bottom: 0px;
   color: white;
 }
-.el-menu--horizontal>.el-menu-item.is-active {
+
+.el-menu--horizontal > .el-menu-item.is-active {
   border-bottom: 0px;
 }
 
